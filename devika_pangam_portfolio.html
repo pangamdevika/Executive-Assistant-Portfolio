@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devika Dinesh Pangam — Executive Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-950:#0A0F1E;
+    --navy-900:#0F1526;
+    --navy-800:#161D33;
+    --navy-700:#1E2740;
+    --gold:#C6A360;
+    --gold-bright:#E8D0A0;
+    --ivory:#F3EFE6;
+    --slate:#8B93A7;
+    --line:rgba(198,163,96,0.28);
+    --serif:'Playfair Display', serif;
+    --sans:'Inter', sans-serif;
+    --mono:'IBM Plex Mono', monospace;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+
+  body{
+    background:var(--navy-950);
+    color:var(--ivory);
+    font-family:var(--sans);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{color:inherit; text-decoration:none;}
+
+  ::selection{background:var(--gold); color:var(--navy-950);}
+
+  .wrap{
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 40px;
+  }
+
+  /* ---------- Texture / background ---------- */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+      linear-gradient(rgba(198,163,96,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(198,163,96,0.035) 1px, transparent 1px);
+    background-size:64px 64px;
+    pointer-events:none;
+    z-index:0;
+    opacity:0.5;
+  }
+
+  /* ---------- Nav ---------- */
+  header{
+    position:fixed;
+    top:0; left:0; right:0;
+    z-index:100;
+    background:rgba(10,15,30,0.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1100px;
+    margin:0 auto;
+    padding:20px 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .brand{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.14em;
+    color:var(--gold-bright);
+    text-transform:uppercase;
+  }
+  .brand span{color:var(--slate);}
+  nav.tabs{
+    display:flex;
+    gap:2px;
+  }
+  nav.tabs a{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--slate);
+    padding:8px 14px;
+    border:1px solid transparent;
+    transition:color .25s ease, border-color .25s ease, background .25s ease;
+    white-space:nowrap;
+  }
+  nav.tabs a:hover, nav.tabs a.active{
+    color:var(--gold-bright);
+    border-color:var(--line);
+    background:rgba(198,163,96,0.06);
+  }
+  .nav-toggle{
+    display:none;
+    flex-direction:column;
+    gap:4px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    padding:6px;
+  }
+  .nav-toggle span{
+    width:22px; height:1px; background:var(--gold-bright);
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    z-index:1;
+    padding:180px 0 120px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero .file-tag{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.18em;
+    color:var(--gold);
+    text-transform:uppercase;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:28px;
+  }
+  .file-tag::before{
+    content:"";
+    width:34px; height:1px;
+    background:var(--gold);
+  }
+  h1.name{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(42px, 7vw, 84px);
+    line-height:1.03;
+    letter-spacing:-0.01em;
+    color:var(--ivory);
+    max-width:900px;
+  }
+  h1.name em{
+    font-style:italic;
+    color:var(--gold-bright);
+    font-weight:500;
+  }
+  .hero-tagline{
+    margin-top:26px;
+    font-size:19px;
+    color:var(--slate);
+    max-width:560px;
+    font-weight:400;
+  }
+  .hero-tagline strong{color:var(--ivory); font-weight:500;}
+
+  .hero-meta{
+    margin-top:56px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:0;
+    border-top:1px solid var(--line);
+  }
+  .hero-meta .stat{
+    flex:1 1 160px;
+    padding:22px 28px 0 0;
+    border-right:1px solid var(--line);
+  }
+  .hero-meta .stat:last-child{border-right:none;}
+  .hero-meta .num{
+    font-family:var(--serif);
+    font-size:34px;
+    color:var(--gold-bright);
+    display:block;
+  }
+  .hero-meta .label{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--slate);
+    margin-top:6px;
+    display:block;
+  }
+
+  /* ---------- Section shell ---------- */
+  section{
+    position:relative;
+    z-index:1;
+    padding:110px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .exhibit{
+    display:flex;
+    align-items:baseline;
+    gap:18px;
+    margin-bottom:56px;
+  }
+  .exhibit .tag{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.16em;
+    color:var(--gold);
+    text-transform:uppercase;
+    border:1px solid var(--line);
+    padding:6px 12px;
+  }
+  .exhibit h2{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(28px, 4vw, 40px);
+    color:var(--ivory);
+  }
+  .section-intro{
+    max-width:640px;
+    color:var(--slate);
+    font-size:16px;
+    margin-bottom:50px;
+    margin-top:-30px;
+  }
+
+  /* ---------- About ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr;
+    gap:70px;
+    align-items:start;
+  }
+  .about-grid p{
+    color:var(--slate);
+    font-size:16.5px;
+    margin-bottom:20px;
+    max-width:560px;
+  }
+  .about-grid p strong{color:var(--ivory); font-weight:500;}
+  .sectors{
+    border-left:1px solid var(--line);
+    padding-left:32px;
+  }
+  .sectors .label{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:16px;
+    display:block;
+  }
+  .sectors ul{list-style:none;}
+  .sectors li{
+    color:var(--ivory);
+    font-size:14.5px;
+    padding:9px 0;
+    border-bottom:1px dashed var(--line);
+    display:flex;
+    justify-content:space-between;
+  }
+  .sectors li:last-child{border-bottom:none;}
+  .sectors li span{color:var(--slate); font-family:var(--mono); font-size:11px;}
+
+  /* ---------- Experience Timeline ---------- */
+  .timeline{
+    position:relative;
+    padding-left:40px;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left:0; top:6px; bottom:6px;
+    width:1px;
+    background:linear-gradient(var(--gold), transparent 96%);
+  }
+  .role{
+    position:relative;
+    padding-bottom:52px;
+  }
+  .role:last-child{padding-bottom:0;}
+  .role::before{
+    content:"";
+    position:absolute;
+    left:-45px; top:5px;
+    width:9px; height:9px;
+    border-radius:50%;
+    background:var(--navy-950);
+    border:1px solid var(--gold);
+  }
+  .role.current::before{
+    background:var(--gold);
+  }
+  .role-head{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:10px 20px;
+  }
+  .role-title{
+    font-family:var(--serif);
+    font-size:22px;
+    font-weight:600;
+    color:var(--ivory);
+  }
+  .role-dates{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--gold);
+    white-space:nowrap;
+  }
+  .role-org{
+    color:var(--slate);
+    font-size:14.5px;
+    margin-top:4px;
+    font-style:italic;
+  }
+  .role-desc{
+    color:var(--slate);
+    font-size:15px;
+    margin-top:12px;
+    max-width:640px;
+  }
+  .engagements{
+    margin-top:22px;
+    padding-left:20px;
+    border-left:1px solid var(--line);
+  }
+  .engagement{
+    margin-bottom:22px;
+  }
+  .engagement:last-child{margin-bottom:0;}
+  .engagement-head{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:8px 16px;
+    font-size:15px;
+    color:var(--ivory);
+    font-weight:500;
+  }
+  .engagement-head .dates{
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:var(--slate);
+    font-weight:400;
+  }
+  .engagement-org{
+    font-size:13.5px;
+    color:var(--gold-bright);
+    margin-top:2px;
+  }
+  .engagement p{
+    color:var(--slate);
+    font-size:14px;
+    margin-top:8px;
+    max-width:600px;
+  }
+
+  /* ---------- Education ---------- */
+  .edu-card{
+    border:1px solid var(--line);
+    padding:40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:20px;
+  }
+  .edu-card .degree{
+    font-family:var(--serif);
+    font-size:26px;
+    color:var(--ivory);
+  }
+  .edu-card .school{
+    color:var(--slate);
+    margin-top:6px;
+    font-size:15px;
+  }
+  .edu-card .year{
+    font-family:var(--mono);
+    color:var(--gold);
+    font-size:13px;
+  }
+  .languages{
+    margin-top:36px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .lang-cell{
+    background:var(--navy-950);
+    padding:22px 18px;
+  }
+  .lang-cell .lang-name{
+    font-family:var(--serif);
+    font-size:17px;
+    color:var(--ivory);
+  }
+  .lang-cell .lang-level{
+    font-family:var(--mono);
+    font-size:10.5px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-top:6px;
+    display:block;
+  }
+
+  /* ---------- Skills ---------- */
+  .skills-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .skill-card{
+    background:var(--navy-950);
+    padding:34px 30px;
+    transition:background .3s ease;
+  }
+  .skill-card:hover{background:var(--navy-900);}
+  .skill-card .n{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--gold);
+    letter-spacing:0.08em;
+  }
+  .skill-card h3{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:19px;
+    color:var(--ivory);
+    margin:12px 0 10px;
+  }
+  .skill-card p{
+    color:var(--slate);
+    font-size:14px;
+  }
+
+  /* ---------- Achievements ---------- */
+  .achieve-list{
+    display:flex;
+    flex-direction:column;
+  }
+  .achieve{
+    display:grid;
+    grid-template-columns:90px 1fr;
+    gap:24px;
+    padding:28px 0;
+    border-top:1px solid var(--line);
+  }
+  .achieve:last-child{border-bottom:1px solid var(--line);}
+  .achieve .mark{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:30px;
+    color:var(--gold);
+  }
+  .achieve h4{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:17px;
+    color:var(--ivory);
+    margin-bottom:6px;
+  }
+  .achieve p{
+    color:var(--slate);
+    font-size:14.5px;
+    max-width:620px;
+  }
+
+  /* ---------- Certifications ---------- */
+  .cert-list{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .cert{
+    background:var(--navy-950);
+    padding:32px 30px;
+    transition:background .3s ease;
+  }
+  .cert:hover{background:var(--navy-900);}
+  .cert-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:16px;
+  }
+  .cert-badge{
+    font-family:var(--mono);
+    font-size:10.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--gold);
+    border:1px solid var(--line);
+    padding:5px 10px;
+  }
+  .cert-date{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--slate);
+  }
+  .cert h3{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:18.5px;
+    color:var(--ivory);
+    line-height:1.3;
+    margin-bottom:10px;
+  }
+  .cert-meta{
+    font-size:13px;
+    color:var(--slate);
+    margin-bottom:14px;
+  }
+  .cert-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .cert-tags span{
+    font-family:var(--mono);
+    font-size:10.5px;
+    letter-spacing:0.04em;
+    color:var(--gold-bright);
+    background:rgba(198,163,96,0.08);
+    border:1px solid var(--line);
+    padding:5px 10px;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact-section{border-bottom:none;}
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+  }
+  .contact-lead h2{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(30px,4vw,44px);
+    color:var(--ivory);
+    max-width:480px;
+    line-height:1.15;
+  }
+  .contact-lead p{
+    color:var(--slate);
+    margin-top:20px;
+    max-width:440px;
+    font-size:15.5px;
+  }
+  .contact-list{
+    display:flex;
+    flex-direction:column;
+  }
+  .contact-list a, .contact-list .row{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 0;
+    border-top:1px solid var(--line);
+    font-size:15px;
+  }
+  .contact-list a:last-child, .contact-list .row:last-child{border-bottom:1px solid var(--line);}
+  .contact-list .k{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--gold);
+    align-self:center;
+  }
+  .contact-list .v{color:var(--ivory); transition:color .2s ease;}
+  .contact-list a:hover .v{color:var(--gold-bright);}
+
+  footer{
+    padding:34px 0 50px;
+    text-align:center;
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--slate);
+  }
+
+  /* ---------- Reveal animation ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(18px);
+    transition:opacity .7s ease, transform .7s ease;
+  }
+  .reveal.in{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:860px){
+    .wrap{padding:0 24px;}
+    .nav-inner{padding:18px 24px;}
+    nav.tabs{
+      position:fixed;
+      top:64px; left:0; right:0;
+      background:var(--navy-900);
+      border-bottom:1px solid var(--line);
+      flex-direction:column;
+      padding:10px 24px 18px;
+      display:none;
+    }
+    nav.tabs.open{display:flex;}
+    nav.tabs a{padding:12px 0; border-bottom:1px dashed var(--line);}
+    .nav-toggle{display:flex;}
+    .about-grid{grid-template-columns:1fr; gap:40px;}
+    .sectors{border-left:none; padding-left:0; border-top:1px solid var(--line); padding-top:28px;}
+    .skills-grid{grid-template-columns:1fr 1fr;}
+    .languages{grid-template-columns:1fr 1fr;}
+    .cert-list{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    .hero-meta .stat{flex:1 1 45%;}
+    .timeline{padding-left:28px;}
+    .role::before{left:-33px;}
+  }
+  @media (max-width:520px){
+    .skills-grid{grid-template-columns:1fr;}
+    .languages{grid-template-columns:1fr;}
+    .cert-list{grid-template-columns:1fr;}
+    .hero{padding:150px 0 90px;}
+    .achieve{grid-template-columns:56px 1fr;}
+    section{padding:80px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="brand">D. PANGAM <span>/ EXECUTIVE PROFILE</span></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav class="tabs" id="navTabs">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#engagements">Engagements</a>
+      <a href="#skills">Skills</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="file-tag">File No. 018 / Executive Office</div>
+    <h1 class="name">Devika Dinesh<br><em>Pangam.</em></h1>
+    <p class="hero-tagline">The force behind high-performing leaders — <strong>18+ years</strong> steering the offices of Managing Directors, Promoters and Founders across manufacturing, law, consulting and culture.</p>
+    <div class="hero-meta">
+      <div class="stat"><span class="num">18+</span><span class="label">Years in Practice</span></div>
+      <div class="stat"><span class="num">08</span><span class="label">Organisations Served</span></div>
+      <div class="stat"><span class="num">04</span><span class="label">Languages Spoken</span></div>
+      <div class="stat"><span class="num">MD</span><span class="label">Office &amp; Promoter Desk</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="exhibit"><span class="tag">Exhibit A</span><h2>About</h2></div>
+    <div class="about-grid">
+      <div class="reveal">
+        <p>Devika is a <strong>dynamic, results-oriented executive partner</strong> with over eighteen years of cross-industry experience supporting CXOs, Managing Directors and Promoter groups. Her work sits at the intersection of governance, operations and strategy — anticipating what leadership needs before it's asked for.</p>
+        <p>She has built a reputation as a <strong>trusted strategic partner</strong> inside management teams: streamlining executive workflows, coordinating HR and vendor relationships, and holding the discretion required to operate at the Founder's Office level. A proactive approach paired with sharp interpersonal instinct keeps stakeholders aligned even inside fast-moving, high-stakes environments.</p>
+        <p>Her range spans <strong>hospitality, legal and consulting practices, manufacturing, private equity and the cultural sector</strong> — proof that the discipline of running an executive office translates cleanly across very different worlds.</p>
+      </div>
+      <div class="sectors reveal">
+        <span class="label">Sectors Covered</span>
+        <ul>
+          <li>Real Estate &amp; Private Equity <span>2023–Now</span></li>
+          <li>Manufacturing &amp; Pipe Mfg. <span>2023–24</span></li>
+          <li>Culture &amp; Museums <span>2025</span></li>
+          <li>Legal &amp; Consulting <span>2016–22</span></li>
+          <li>Accounting &amp; Advisory <span>2014–18</span></li>
+          <li>Telecom &amp; Hospitality <span>2004–14</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="exhibit"><span class="tag">Exhibit B</span><h2>Experience</h2></div>
+    <div class="timeline">
+
+      <div class="role current reveal">
+        <div class="role-head">
+          <div class="role-title">Independent Consultant — Jt. MD, Promoter &amp; Founder's Office</div>
+          <div class="role-dates">01/2023 — Current</div>
+        </div>
+        <div class="role-org">Real Estate, Museum, Manufacturing &amp; Private Equity Firm — Pune, India</div>
+        <div class="engagements">
+          <div class="engagement">
+            <div class="engagement-head"><span>Strategic Advisor — MD's Office, Business Development &amp; Marketing Head</span><span class="dates">Nov 2025 — Present</span></div>
+            <div class="engagement-org">Rajmudra Group of Companies</div>
+            <p>Partners directly with the Managing Director to steer corporate strategy, streamline operations, and lead the cross-functional Business Development and Marketing teams to accelerate revenue growth and market penetration.</p>
+          </div>
+          <div class="engagement">
+            <div class="engagement-head"><span>Executive Consultant — MD's Office</span><span class="dates">Mar 2025 — Oct 2025</span></div>
+            <div class="engagement-org">Blades of Glory Cricket Museum, Pune</div>
+            <p>Managed strategic operations, scaling and institutional positioning for the world's largest cricket museum, driving brand visibility and operational efficiency.</p>
+          </div>
+          <div class="engagement">
+            <div class="engagement-head"><span>Joint MD &amp; Promoter Consultant</span><span class="dates">Nov 2023 — Oct 2024</span></div>
+            <div class="engagement-org">Jindal Saw Ltd.</div>
+            <p>Trusted advisor to the promoter group within the Joint Managing Director domain for a global pipe-manufacturing leader — corporate governance, process optimisation and value-creation strategy.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="role reveal">
+        <div class="role-head">
+          <div class="role-title">Executive Assistant to Managing &amp; Founding Partner</div>
+          <div class="role-dates">10/2018 — 12/2022</div>
+        </div>
+        <div class="role-org">Trilegal — Mumbai</div>
+      </div>
+
+      <div class="role reveal">
+        <div class="role-head">
+          <div class="role-title">Secretary to Partner — IIC &amp; FS (TAS)</div>
+          <div class="role-dates">12/2016 — 10/2018</div>
+        </div>
+        <div class="role-org">Ernst &amp; Young LLP — Mumbai</div>
+      </div>
+
+      <div class="role reveal">
+        <div class="role-head">
+          <div class="role-title">Executive Assistant to National Head (IDT &amp; DT)</div>
+          <div class="role-dates">12/2014 — 11/2016</div>
+        </div>
+        <div class="role-org">Grant Thornton India LLP — Mumbai</div>
+      </div>
+
+      <div class="role reveal">
+        <div class="role-head">
+          <div class="role-title">Executive Assistant — MD &amp; CEO (Operations)</div>
+          <div class="role-dates">10/2013 — 03/2014</div>
+        </div>
+        <div class="role-org">Viztar International — Mumbai</div>
+      </div>
+
+      <div class="role reveal">
+        <div class="role-head">
+          <div class="role-title">Maternity Break — Journey Into Motherhood</div>
+          <div class="role-dates">06/2012 — 10/2013</div>
+        </div>
+        <div class="role-org">Mumbai</div>
+      </div>
+
+      <div class="role reveal">
+        <div class="role-head">
+          <div class="role-title">Part-Time &amp; Contractual Roles</div>
+          <div class="role-dates">04/2004 — 05/2012</div>
+        </div>
+        <div class="role-org">Siemens Ltd · HII · Orange Business Services — Mumbai</div>
+        <div class="role-desc">Worked a series of contractual, part-time roles while pursuing graduation and serving as sole breadwinner for the family — the practical grounding for everything that followed.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="exhibit"><span class="tag">Exhibit C</span><h2>Education</h2></div>
+    <div class="edu-card reveal">
+      <div>
+        <div class="degree">Bachelor of Commerce</div>
+        <div class="school">Delhi University — Mumbai, India</div>
+      </div>
+      <div class="year">01/2010</div>
+    </div>
+    <div class="languages reveal">
+      <div class="lang-cell"><div class="lang-name">Marathi</div><span class="lang-level">First Language</span></div>
+      <div class="lang-cell"><div class="lang-name">Hindi</div><span class="lang-level">Proficient</span></div>
+      <div class="lang-cell"><div class="lang-name">English</div><span class="lang-level">Proficient</span></div>
+      <div class="lang-cell"><div class="lang-name">Gujarati</div><span class="lang-level">Intermediate</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="engagements">
+  <div class="wrap">
+    <div class="exhibit"><span class="tag">Exhibit D</span><h2>Key Engagements</h2></div>
+    <p class="section-intro">Selected mandates run from the Founder's and Promoter's office — where the brief is rarely written down in full.</p>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <span class="n">01</span>
+        <h3>Rajmudra Group</h3>
+        <p>Steering corporate strategy and leading cross-functional Business Development &amp; Marketing teams directly with the Managing Director.</p>
+      </div>
+      <div class="skill-card reveal">
+        <span class="n">02</span>
+        <h3>Blades of Glory Cricket Museum</h3>
+        <p>Scaling and institutional positioning for the world's largest cricket museum from the Managing Director's office.</p>
+      </div>
+      <div class="skill-card reveal">
+        <span class="n">03</span>
+        <h3>Jindal Saw Ltd.</h3>
+        <p>Corporate governance, process optimisation and value-creation strategy for a global pipe-manufacturing leader.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="exhibit"><span class="tag">Exhibit E</span><h2>Skills</h2></div>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <span class="n">01</span>
+        <h3>Strategic Advisory &amp; C-Suite Proxy</h3>
+        <p>Corporate governance and strategic execution as a direct extension of MD and Promoter groups.</p>
+      </div>
+      <div class="skill-card reveal">
+        <span class="n">02</span>
+        <h3>Interim &amp; Change Management</h3>
+        <p>Stabilising volatile environments and building structured, accountable frameworks across industries.</p>
+      </div>
+      <div class="skill-card reveal">
+        <span class="n">03</span>
+        <h3>Digital Transformation &amp; Automation</h3>
+        <p>WCGT360, MS Dynamics, LegalXgen, Google Workspace, MS Office, and AI tools including ChatGPT, Gemini &amp; Perplexity.</p>
+      </div>
+      <div class="skill-card reveal">
+        <span class="n">04</span>
+        <h3>Stakeholder Relations &amp; Problem Solving</h3>
+        <p>Trust-based relationships across internal teams and external partners; scalable fixes to process inefficiency.</p>
+      </div>
+      <div class="skill-card reveal">
+        <span class="n">05</span>
+        <h3>Brand Equity &amp; GTM Strategy</h3>
+        <p>Business development and marketing support, digital outreach, influencer coordination and partnership alignment.</p>
+      </div>
+      <div class="skill-card reveal">
+        <span class="n">06</span>
+        <h3>Executive Governance &amp; Logistics</h3>
+        <p>Complex global itineraries, visa logistics and cross-border stakeholder meetings across dynamic verticals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="achievements">
+  <div class="wrap">
+    <div class="exhibit"><span class="tag">Exhibit F</span><h2>Achievements</h2></div>
+    <div class="achieve-list">
+      <div class="achieve reveal">
+        <span class="mark">01</span>
+        <div>
+          <h4>Trusted Promoter-Group Advisor</h4>
+          <p>Operated within the Joint Managing Director domain at Jindal Saw Ltd., a global pipe-manufacturing leader, on corporate governance and value-creation strategy.</p>
+        </div>
+      </div>
+      <div class="achieve reveal">
+        <span class="mark">02</span>
+        <div>
+          <h4>Institutional Scale-Up</h4>
+          <p>Drove brand visibility and operational efficiency for the world's largest cricket museum from the Managing Director's office.</p>
+        </div>
+      </div>
+      <div class="achieve reveal">
+        <span class="mark">03</span>
+        <div>
+          <h4>Four-Year Partnership at Trilegal</h4>
+          <p>Sustained, high-trust support to a Managing &amp; Founding Partner across more than four years at a leading Indian law firm.</p>
+        </div>
+      </div>
+      <div class="achieve reveal">
+        <span class="mark">04</span>
+        <div>
+          <h4>Cross-Sector Range</h4>
+          <p>Built a track record spanning hospitality, consulting, telecom, manufacturing, retail and e-commerce — with the Big Four (EY, Grant Thornton) among the roster.</p>
+        </div>
+      </div>
+      <div class="achieve reveal">
+        <span class="mark">05</span>
+        <div>
+          <h4>Self-Made Beginning</h4>
+          <p>Financed her own graduation and supported her family as sole breadwinner through eight years of contractual and part-time roles before stepping into the executive office.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <div class="exhibit"><span class="tag">Exhibit G</span><h2>Certifications</h2></div>
+    <p class="section-intro">Continuing education undertaken through LinkedIn Learning, in partnership with SHRM and PMI, to keep pace with the evolving demands of the executive office.</p>
+    <div class="cert-list">
+
+      <div class="cert reveal">
+        <div class="cert-top">
+          <span class="cert-badge">LinkedIn Learning</span>
+          <span class="cert-date">27 Jun 2026</span>
+        </div>
+        <h3>Choosing the Right Project Management Certification for Your Career</h3>
+        <div class="cert-meta">PMI Registered Education Provider · 0.75 PDUs</div>
+        <div class="cert-tags"><span>Project Management</span><span>Career Development</span></div>
+      </div>
+
+      <div class="cert reveal">
+        <div class="cert-top">
+          <span class="cert-badge">LinkedIn Learning</span>
+          <span class="cert-date">26 Jun 2026</span>
+        </div>
+        <h3>Strategic Human Resources</h3>
+        <div class="cert-meta">SHRM Recertification Provider · 1.00 PDC</div>
+        <div class="cert-tags"><span>Strategic Human Resource Planning</span></div>
+      </div>
+
+      <div class="cert reveal">
+        <div class="cert-top">
+          <span class="cert-badge">LinkedIn Learning</span>
+          <span class="cert-date">25 Jun 2026</span>
+        </div>
+        <h3>Become a Chief of Staff</h3>
+        <div class="cert-meta">18 minutes</div>
+        <div class="cert-tags"><span>Career Management</span><span>Leadership</span></div>
+      </div>
+
+      <div class="cert reveal">
+        <div class="cert-top">
+          <span class="cert-badge">LinkedIn Learning</span>
+          <span class="cert-date">25 Jun 2026</span>
+        </div>
+        <h3>Body Language for Leaders and Managers</h3>
+        <div class="cert-meta">49 minutes</div>
+        <div class="cert-tags"><span>Body Language</span><span>Leadership</span></div>
+      </div>
+
+      <div class="cert reveal">
+        <div class="cert-top">
+          <span class="cert-badge">LinkedIn Learning</span>
+          <span class="cert-date">25 Jun 2026</span>
+        </div>
+        <h3>Administrative Professional Tips</h3>
+        <div class="cert-meta">3 hours 4 minutes</div>
+        <div class="cert-tags"><span>Administrative Assistance</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-lead reveal">
+        <div class="file-tag" style="margin-bottom:20px;">Exhibit H / Contact</div>
+        <h2>Let's discuss<br>the mandate.</h2>
+        <p>Available for advisory, interim and Founder's-Office engagements across Mumbai and Pune, and remote-first for the right brief.</p>
+      </div>
+      <div class="contact-list reveal">
+        <a href="mailto:pangamdevika@gmail.com"><span class="k">Email</span><span class="v">pangamdevika@gmail.com</span></a>
+        <a href="tel:+919136036629"><span class="k">Phone</span><span class="v">+91 91360 36629</span></a>
+        <a href="https://www.linkedin.com/in/devika-dinesh-pangam-3" target="_blank" rel="noopener"><span class="k">LinkedIn</span><span class="v">/in/devika-dinesh-pangam-3</span></a>
+        <div class="row"><span class="k">Location</span><span class="v">Mumbai · Pune, India</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Devika Dinesh Pangam — Executive Profile</footer>
+
+<script>
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navTabs = document.getElementById('navTabs');
+  navToggle.addEventListener('click', () => navTabs.classList.toggle('open'));
+  navTabs.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navTabs.classList.remove('open')));
+
+  // Active nav highlight on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('nav.tabs a');
+  const setActive = () => {
+    let current = '';
+    sections.forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      if (rect.top <= 120 && rect.bottom >= 120) current = sec.getAttribute('id');
+    });
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+  };
+  window.addEventListener('scroll', setActive);
+  setActive();
+
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
